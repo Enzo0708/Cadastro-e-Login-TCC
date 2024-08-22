@@ -1,0 +1,87 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-cadastro {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 461px;
+    height: auto;
+    align-items: center;
+}
+
+.title-h1-cad{
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    padding-right: 40px; /* Espaço para o ícone */
+    border-radius: 8px;
+    border: 1px solid var(--AllBlack, rgba(0, 0, 0, 1));
+}
+
+.material-symbols-outlined.icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #999;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #b01818;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #a01616;
+}
