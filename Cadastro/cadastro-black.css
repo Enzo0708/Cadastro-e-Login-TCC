@@ -11,7 +11,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-.bg-body{
+
+.bg-body-c-b{
     background-color: #181717;
     color: #333;
 }
