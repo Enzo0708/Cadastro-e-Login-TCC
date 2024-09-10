@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    
+    <!-- Botões principais para abrir as modais -->
+    <button class="btn-open" onclick="openModal('modalConfirm')">Abrir Modal de Confirmação</button>
+    <button class="btn-open" onclick="openModal('modalAddItem')">Abrir Modal de Adicionar Item</button>
+
+    <!-- Primeira Modal (Confirmação) -->
+    <div id="modalConfirm" class="modal">
+        <div class="modal-content">
+            <p>Tem certeza que deseja fazer as alterações?</p>
+            <div class="modal-buttons">
+                <button class="btn-cancel" onclick="closeModal('modalConfirm')">Cancelar</button>
+                <button class="btn-confirm">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Segunda Modal (Adicionar Item) -->
+    <div id="modalAddItem" class="modal">
+        <div class="modal-content">
+            <button class="btn-close" onclick="closeModal('modalAddItem')">X</button>
+            <h2>Adicionar Item</h2>
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Insira o Nome do Patrimônio">
+
+            <label for="description">Descrição</label>
+            <input type="text" id="description" name="description" placeholder="Insira a Descrição do Patrimônio">
+
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id" placeholder="Insira o ID do Patrimônio">
+
+            <label for="person">Pessoa Responsável</label>
+            <input type="text" id="person" name="person" placeholder="Insira o Responsável pelo Patrimônio">
+
+            <label for="sector">Setor</label>
+            <input type="text" id="sector" name="sector" placeholder="Insira o Setor do Patrimônio">
+
+            <div class="modal-actions">
+                <button class="btn-scan">
+                    <span class="material-symbols-outlined">qr_code_scanner</span> Anexar QR-Code
+                </button>
+                <button class="btn-add" onclick="addItem()">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        function addItem() {
+            // Fecha a modal de adicionar item
+            closeModal('modalAddItem');
+            // Abre a modal de confirmação
+            openModal('modalConfirm');
+        }
+    </script>
+
+</body>
+</html>
